@@ -7,13 +7,15 @@ import { Paths } from "./paths.ts";
 import { Login } from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
 import { ConfigProvider, theme } from "antd";
+import { Auth } from "./features/auth/Auth.tsx";
+import { Employees } from "./pages/employees/Employees.tsx";
 import "@ant-design/v5-patch-for-react-19";
 import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>Employee</h1>,
+    element: <Employees />,
   },
   {
     path: Paths.login,
@@ -33,7 +35,9 @@ createRoot(document.getElementById("root")!).render(
           algorithm: theme.darkAlgorithm,
         }}
       >
-        <RouterProvider router={router}></RouterProvider>
+        <Auth>
+          <RouterProvider router={router} />
+        </Auth>
       </ConfigProvider>
     </Provider>
   </StrictMode>

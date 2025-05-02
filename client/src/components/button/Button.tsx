@@ -17,6 +17,7 @@ type Props = {
   loading?: boolean;
   shape?: "default" | "circle" | "round" | undefined;
   icon?: ReactNode;
+  style?: React.CSSProperties;
 };
 
 export const Button: FC<Props> = ({
@@ -28,6 +29,7 @@ export const Button: FC<Props> = ({
   shape,
   icon,
   onClick,
+  style,
 }) => {
   return (
     <Form.Item>
@@ -39,6 +41,7 @@ export const Button: FC<Props> = ({
         shape={shape}
         icon={icon}
         onClick={onClick}
+        style={style}
       >
         {children}
       </AntButton>
