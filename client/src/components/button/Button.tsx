@@ -5,19 +5,13 @@ type Props = {
   children: ReactNode;
   htmlType?: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
-  type?:
-    | "default"
-    | "ghost"
-    | "link"
-    | "text"
-    | "primary"
-    | "dashed"
-    | undefined;
+  type?: "default" | "link" | "text" | "primary" | "dashed" | undefined;
   danger?: boolean;
   loading?: boolean;
   shape?: "default" | "circle" | "round" | undefined;
   icon?: ReactNode;
   style?: React.CSSProperties;
+  ghost?: boolean;
 };
 
 export const Button: FC<Props> = ({
@@ -30,6 +24,7 @@ export const Button: FC<Props> = ({
   icon,
   onClick,
   style,
+  ghost,
 }) => {
   return (
     <Form.Item>
@@ -42,6 +37,7 @@ export const Button: FC<Props> = ({
         icon={icon}
         onClick={onClick}
         style={style}
+        ghost={ghost}
       >
         {children}
       </AntButton>

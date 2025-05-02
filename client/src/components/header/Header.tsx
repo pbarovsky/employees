@@ -24,7 +24,7 @@ export const Header = () => {
       <Space align="center" direction="horizontal">
         <TeamOutlined className={sc.teamIcon} />
         <Link to={Paths.home}>
-          <Button type="ghost">
+          <Button type="link">
             <Typography.Title style={{ marginTop: "50px" }} level={1}>
               Сотрудники
             </Typography.Title>
@@ -34,7 +34,7 @@ export const Header = () => {
       {user ? (
         <Button
           style={{ marginTop: "20px" }}
-          type="ghost"
+          ghost={true}
           icon={<LoginOutlined />}
           onClick={onLogoutHandler}
         >
@@ -48,12 +48,12 @@ export const Header = () => {
           size="large"
         >
           <Link to={Paths.register}>
-            <Button icon={<UserOutlined />} type="ghost">
+            <Button icon={<UserOutlined />} ghost={true}>
               Зарегистрироваться
             </Button>
           </Link>
           <Link to={Paths.login}>
-            <Button icon={<LoginOutlined />} type="ghost">
+            <Button icon={<LoginOutlined />} ghost={true}>
               Войти
             </Button>
           </Link>
