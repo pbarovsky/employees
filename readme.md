@@ -38,8 +38,8 @@
 1. Клонируйте репозиторий:
 
 ```bash
-git clone [url-репозитория]
-cd [название-проекта]
+git clone https://github.com/pbarovsky/employees.git
+cd employees
 ```
 
 2. Установите зависимости для сервера:
